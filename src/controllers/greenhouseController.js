@@ -72,7 +72,8 @@ const createGreenhouse = async (req, res) => {
 
     const greenhouse = new Greenhouse({
         name,
-        temperature
+        temperature,
+        temperature_wish: temperature
     })
 
     let saved
@@ -140,7 +141,8 @@ const updateGreenhouse = async (req, res) => {
 
         const greenhouse = new Greenhouse({
             name,
-            temperature
+            temperature,
+            temperature_wish: temperature
         })
 
         let saved
@@ -159,7 +161,8 @@ const updateGreenhouse = async (req, res) => {
     
     greenhouse.name = req.body.name || greenhouse.name
     greenhouse.temperature = req.body.temperature || greenhouse.temperature
-    
+    greenhouse.temperature_wish = req.body.temperature_wish || greenhouse.temperature_wish
+
     let updatedGreenhouse
     
     try {

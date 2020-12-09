@@ -2,7 +2,8 @@ const Joi = require('joi')
 
 const greenhouseSchema = Joi.object({
     name: Joi.string().max(255).required(),
-    temperature: Joi.number().required()
+    temperature: Joi.number().required(),
+    temperature_wish: Joi.number().required()
 })
 
 const userValidation = (data) => {

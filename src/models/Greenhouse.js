@@ -9,6 +9,10 @@ const greenhouseSchema = new mongoose.Schema({
     temperature: {
         type: Number,
         required: true
+    },
+    temperature_wish: {
+        type: Number,
+        required: true
     }
 }, { timestamps: mongoose.timestamps })
 
